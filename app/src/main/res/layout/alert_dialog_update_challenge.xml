@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_gravity="center"
+        app:helperText="Digite a nova palavra do desafio">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tiet_word"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Palavra"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_gravity="center"
+        app:helperText="Digite o Link da nova imagem">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tiet_url_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Link da Imagem"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_gravity="center"
+        app:helperText="Digite o Link do novo video">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tiet_url_video"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Link do Video"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_gravity="center"
+        app:helperText="Digite o Link do novo som">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tiet_url_sound"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Link do Som"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btn_confirm_update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:layout_marginBottom="20dp"
+        android:layout_gravity="center"
+        android:text="CONFIRMAR"
+        style="@style/Widget.MaterialComponents.Button"
+        android:textSize="18sp"/>
+
+</LinearLayout>

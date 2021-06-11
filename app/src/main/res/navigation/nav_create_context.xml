@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_create_context"
+    app:startDestination="@id/nav_context_name">
+
+    <fragment
+        android:id="@+id/nav_context_name"
+        android:name="br.ufpb.dcx.apps4society.educapimanager.view.ui.context.create.NameCreateContextFragment"
+        tools:layout="@layout/fragment_create_context_1_name"
+        android:label="@string/label_create_context" >
+        <action
+            android:id="@+id/action_nav_context_name_to_nav_context_photo"
+            app:destination="@id/nav_context_photo" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_context_photo"
+        android:name="br.ufpb.dcx.apps4society.educapimanager.view.ui.context.create.PhotoCreateContextFragment"
+        android:label="@string/label_create_context"
+        tools:layout="@layout/fragment_create_context_2_photo" >
+        <action
+            android:id="@+id/action_nav_context_photo_to_nav_context_video"
+            app:destination="@id/nav_context_video" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_context_video"
+        android:name="br.ufpb.dcx.apps4society.educapimanager.view.ui.context.create.VideoCreateContextFragment"
+        android:label="@string/label_create_context"
+        tools:layout="@layout/fragment_create_context_3_video" >
+        <action
+            android:id="@+id/action_nav_context_video_to_nav_context_audio"
+            app:destination="@id/nav_context_audio" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_context_audio"
+        android:name="br.ufpb.dcx.apps4society.educapimanager.view.ui.context.create.AudioCreateContextFragment"
+        android:label="@string/label_create_context"
+        tools:layout="@layout/fragment_create_context_4_audio" >
+        <action
+            android:id="@+id/action_nav_context_audio_to_nav_context_sucess"
+            app:destination="@id/nav_context_sucess" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_context_sucess"
+        android:name="br.ufpb.dcx.apps4society.educapimanager.view.ui.context.create.SucessCreateContextFragment"
+        android:label="@string/label_create_context"
+        tools:layout="@layout/fragment_context_create_sucess" />
+
+</navigation>

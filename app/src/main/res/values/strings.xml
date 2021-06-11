@@ -1,0 +1,65 @@
+<resources>
+    <string name="app_name">EducAPI Manager</string>
+    <string name="app_main_name">EducAPI Manager</string>
+    <string name="nav_header_title">EducAPI Manager</string>
+    <string name="nav_header_subtitle">apps4society@dcx.ufpb.br</string>
+    <string name="nav_header_desc">EducAPI Manager</string>
+    <string name="action_settings">Configurações</string>
+    <string name="app_version">v1.0</string>
+    <string name="about_this_app">O Educ-API é um serviço colaborativo com informações para
+        aplicativos e sites que trabalhem com alfabetização\n.\nDe forma simples, a API fornece
+        contextos (ou temas) e desafios. Cada um destes possui imagens, vídeos e áudios relacionados.
+        A partir destes dados o usuário pode utilizar da sua imaginação para criar algo que possa
+        ajudar no processo de alfabetização.</string>
+    <string name="label_infos">Saiba mais sobre esse e outros aplicativos acessando o site:</string>
+    <string name="site_projeto">https://apps4society.dcx.ufpb.br/</string>
+
+    <string name="title_activity_nav_drawer">EducAPI Manager</string>
+    <string name="menu_challenge">Desafios</string>
+    <string name="menu_context">Contextos</string>
+    <string name="menu_about">Sobre</string>
+    <string name="menu_contact">Contato</string>
+    <string name="menu_logout">Sair</string>
+    <string name="menu_home">Início</string>
+    <string name="menu_search">Search</string>
+    <string name="menu_auth">Autenticação</string>
+
+    <string name="label_create_context">Criando contexto</string>
+    <string name="label_create_challenge">Criando desafio</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--TELA DE CADASTRO-->
+    <string name="label_personal">Informações pessoais</string>
+    <string name="label_access">Dados para acesso</string>
+    <!--CONTATOS-->
+    <string name="dev">Luis Vitor Amorim</string>
+    <string name="devEmail">luis.vitor@dcx.ufpb.br</string>
+    <string name="devGit">github.com/VitorAmrms</string>
+
+    <string name="dev1">Emerson Ruan Dantas Silva</string>
+    <string name="devEmail1">emerson.ruan@dcx.ufpb.br</string>
+    <string name="dev1Git">github.com/EmersonDantas</string>
+
+    <string name="coordenadora">Ayla Rebouças</string>
+    <string name="coordenadoraEmail">ayla@dcx.ufpb.br</string>
+    <string name="coordenadoraGit">github.com/ayladebora</string>
+
+    <string name="dev2">Raimundo Marcos</string>
+    <string name="dev2Email">raimundo.marcos@dcx.ufpb.br</string>
+    <string name="dev2Git">github.com/MarcosLudgerio</string>
+
+    <string name="dev3">Francivaldo Napoleão Herculano</string>
+    <string name="dev3Email">francivaldo.napoleao@dcx.ufpb.br</string>
+    <string name="dev3Git">github.com/NapoleaoHerculano</string>
+
+    <string name="challenges_label">Desafios</string>
+    <string name="id_label">ID</string>
+    <string name="context_name_label">Context Name</string>
+
+
+    <string name="api_key">AIzaSyBKu8O9msyelwJPRG4hsiMEeW7G2NMjmZw</string>
+    <string name="cx_key">010983324265191686624:wanhkrbv8rc</string>
+
+</resources>

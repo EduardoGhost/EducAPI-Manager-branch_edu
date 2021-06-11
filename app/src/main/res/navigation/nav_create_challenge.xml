@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_create_challenge"
+    app:startDestination="@id/nav_challenge_name">
+
+    <fragment
+        android:id="@+id/nav_challenge_name"
+        android:name="br.ufpb.dcx.apps4society.educapimanager.view.ui.challenge.create.NameCreateChallengeFragment"
+        tools:layout="@layout/fragment_create_challenge_1_name"
+        android:label="@string/label_create_challenge" >
+        <action
+            android:id="@+id/action_nav_challenge_name_to_nav_challenge_photo"
+            app:destination="@id/nav_challenge_photo" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_challenge_photo"
+        android:name="br.ufpb.dcx.apps4society.educapimanager.view.ui.challenge.create.PhotoCreateChallengeFragment"
+        android:label="@string/label_create_challenge"
+        tools:layout="@layout/fragment_create_challenge_2_photo" >
+        <action
+            android:id="@+id/action_nav_challenge_photo_to_nav_challenge_video"
+            app:destination="@id/nav_challenge_video" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_challenge_video"
+        android:name="br.ufpb.dcx.apps4society.educapimanager.view.ui.challenge.create.VideoCreateChallengeFragment"
+        android:label="@string/label_create_challenge"
+        tools:layout="@layout/fragment_create_challenge_3_video" >
+        <action
+            android:id="@+id/action_nav_challenge_video_to_nav_challenge_audio"
+            app:destination="@id/nav_challenge_audio" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_challenge_audio"
+        android:name="br.ufpb.dcx.apps4society.educapimanager.view.ui.challenge.create.AudioCreateChallengeFragment"
+        android:label="@string/label_create_challenge"
+        tools:layout="@layout/fragment_create_challenge_4_audio" >
+        <action
+            android:id="@+id/action_nav_challenge_audio_to_nav_challenge_sucess"
+            app:destination="@id/nav_challenge_sucess" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_challenge_sucess"
+        android:name="br.ufpb.dcx.apps4society.educapimanager.view.ui.challenge.create.SucessCreateChallengeFragment"
+        android:label="@string/label_create_challenge"
+        tools:layout="@layout/fragment_challenge_create_sucess" >
+        <action
+            android:id="@+id/action_nav_challenge_sucess_to_nav_choose_context2"
+            app:destination="@id/nav_choose_context" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_choose_context"
+        android:name="br.ufpb.dcx.apps4society.educapimanager.view.ui.challenge.create.ChooseContextOnCreateChallenge"
+        android:label="fragment_nav_choose_context"
+        tools:layout="@layout/fragment_nav_choose_context" />
+
+</navigation>

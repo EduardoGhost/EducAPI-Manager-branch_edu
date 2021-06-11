@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.LoginActivity">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="260dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="117dp"
+        app:srcCompat="@drawable/logotipofinal_prancheta2"
+        android:layout_gravity="center|top"/>
+
+    <TextView
+        android:id="@+id/app_name2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="EducAPI Manager"
+        android:textColor="@color/slogan_app_color"
+        android:textSize="18sp"
+        android:layout_marginTop="180dp"
+        android:layout_gravity="center|top"
+         />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="100dp"
+        android:text="Entre com os dados usados no cadastro"
+        android:layout_gravity="center" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilEmail"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_gravity="center"
+        app:helperText="Entre com o email usado no cadastro"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtTxEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:inputType="textEmailAddress" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilPassword"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_gravity="center"
+        app:helperText="Entre com a senha usada no cadastro"
+        app:layout_constraintBottom_toTopOf="@+id/btnLogin"
+        app:passwordToggleContentDescription="Mostrar senha"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="@color/design_tint_password_toggle"
+        app:passwordToggleTintMode="src_in">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edtTxPassword"
+            android:hint="Senha"
+            android:inputType="textPassword" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--
+    <TextView
+        android:id="@+id/lostPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="130dp"
+        android:text="Esqueci a senha"
+        android:layout_gravity="start|bottom"
+        />
+-->
+
+    <Button
+        android:id="@+id/btnLogin"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|bottom"
+        android:layout_marginBottom="40dp"
+        android:onClick="autenticarUsuario"
+        android:text="ENTRAR"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/withoutRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_marginEnd="18dp"
+        android:layout_marginRight="18dp"
+        android:layout_marginBottom="130dp"
+        android:onClick="openSemCadastroActivity"
+        android:text="Ainda não tenho cadastro" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

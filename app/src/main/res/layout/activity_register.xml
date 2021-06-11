@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.RegisterActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_register"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:navigationIcon="@drawable/ic_arrow_back_white_24dp"/>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="260dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="100dp"
+        android:layout_gravity="center|top"
+        app:srcCompat="@drawable/logotipofinal_prancheta2"/>
+
+    <TextView
+        android:id="@+id/app_name2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|top"
+        android:layout_marginTop="170dp"
+        android:text="EducAPI Manager"
+        android:textColor="@color/slogan_app_color"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="215dp"
+        android:layout_gravity="center|top"
+        android:text="Cadastre-se para começar a usar o serviço" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilNameRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="60dp"
+        app:helperText="Cadastre Seu Nome">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtTxNameRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nome"
+            android:inputType="textPersonName" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilEmailRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="130dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_gravity="center"
+        app:helperText="Cadastre um email">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtTxEmailRegister"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:hint="Email"
+            android:inputType="textEmailAddress" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilPasswordRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="130dp"
+        android:layout_gravity="center|bottom"
+        app:helperText="Senha deve conter de 8 a 12 caracteres"
+        app:passwordToggleContentDescription="Mostrar senha"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="@color/design_tint_password_toggle"
+        app:passwordToggleTintMode="src_in">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtTxPasswordRegister"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:hint="Senha"
+            android:inputType="textPassword" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <Button
+        android:id="@+id/btnCadastro"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|bottom"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="50dp"
+        android:onClick="cadastrarUsuario"
+        android:text="CADASTRAR"
+        android:textAppearance="@style/Widget.MaterialComponents.Button.TextButton"
+        android:textSize="18sp" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
