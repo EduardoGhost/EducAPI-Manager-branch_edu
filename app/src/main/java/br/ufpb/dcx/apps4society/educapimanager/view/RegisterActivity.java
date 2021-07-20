@@ -12,6 +12,9 @@ import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputLayout;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 import br.ufpb.dcx.apps4society.educapimanager.R;
 import br.ufpb.dcx.apps4society.educapimanager.helper.RetrofitConfig;
 import br.ufpb.dcx.apps4society.educapimanager.model.bean.User;
@@ -94,6 +97,13 @@ public class RegisterActivity extends AppCompatActivity {
         }
         Toast.makeText(RegisterActivity.this, "As senhas não correspondem! Por favor, corrigir.", Toast.LENGTH_LONG).show();
         return false;
+    }
+    //implementar emailInvalido
+    public Boolean emailRegex(String email){
+        String emailRegex = "^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,6}$";
+        Pattern emailPattern = Pattern.compile(emailRegex, Pattern.CASE_INSENSITIVE);
+        Matcher matcher = emailPattern.matcher(email);
+        return matcher.find();
     }
 
     @Override

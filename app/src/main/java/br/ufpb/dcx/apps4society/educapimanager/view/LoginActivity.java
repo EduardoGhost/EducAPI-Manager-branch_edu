@@ -15,6 +15,8 @@ import android.widget.Toast;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import br.ufpb.dcx.apps4society.educapimanager.R;
 import br.ufpb.dcx.apps4society.educapimanager.control.facade.CreateObjectFacade;
