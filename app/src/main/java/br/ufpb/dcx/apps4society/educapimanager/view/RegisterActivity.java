@@ -62,17 +62,23 @@ public class RegisterActivity extends AppCompatActivity {
                 call.enqueue(new Callback<User>() {
                     @Override
                     public void onResponse(Call<User> call, Response<User> response) {
-                        if (response.isSuccessful()){
-                            Toast.makeText(context,"Cadastrado Com Sucesso",Toast.LENGTH_SHORT).show();
-                            Intent ir = new Intent();
-                            ir.setClass(context,LoginActivity.class);
-                            startActivity(ir);
+                        if(emailRegex(edtEmail) == true){
+                            if (response.isSuccessful()){
+                                Toast.makeText(context,"Cadastrado Com Sucesso",Toast.LENGTH_SHORT).show();
+                                Intent ir = new Intent();
+                                ir.setClass(context,LoginActivity.class);
+                                startActivity(ir);
 
-                        }else if(response.code() == 400){
-                            Toast.makeText(context,"Não foi possível cadastrar, verifique se sua senha tem entre 8-12 caracteres e tente novamente",Toast.LENGTH_SHORT).show();
-                        }else{
-                            Toast.makeText(context,"Algo de errado ocorreu",Toast.LENGTH_SHORT).show();
-                        }
+                            }else if(response.code() == 400){
+                                Toast.makeText(context,"Não foi possível cadastrar, verifique se sua senha tem entre 8-12 caracteres e tente novamente",Toast.LENGTH_SHORT).show();
+                            }else{
+                                Toast.makeText(context,"Algo de errado ocorreu",Toast.LENGTH_SHORT).show();
+                            }
+
+                        }Toast.makeText(RegisterActivity.this, "email invalido falta coisa ai", Toast.LENGTH_LONG).show();
+
+
+
                     }
                     @Override
                     public void onFailure(Call<User> call, Throwable t) {
@@ -98,11 +104,19 @@ public class RegisterActivity extends AppCompatActivity {
         Toast.makeText(RegisterActivity.this, "As senhas não correspondem! Por favor, corrigir.", Toast.LENGTH_LONG).show();
         return false;
     }
+    private boolean verificaEmail(){
+        if(edtEmail.getText().toString().equals(emailRegex(edtEmail))){
+            return true;
+        }
+        return true;
+    }
+
     //implementar emailInvalido
-    public Boolean emailRegex(String email){
+    private boolean emailRegex(EditText edtEmail){
+
         String emailRegex = "^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,6}$";
         Pattern emailPattern = Pattern.compile(emailRegex, Pattern.CASE_INSENSITIVE);
-        Matcher matcher = emailPattern.matcher(email);
+        Matcher matcher = emailPattern.matcher((CharSequence) edtEmail);
         return matcher.find();
     }
 

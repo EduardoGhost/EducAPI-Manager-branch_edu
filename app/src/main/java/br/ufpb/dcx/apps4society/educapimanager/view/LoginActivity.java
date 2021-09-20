@@ -73,7 +73,9 @@ public class LoginActivity extends AppCompatActivity {
                             userAuth = new UserDTO(userLogin.getEmail(), userLogin.getPassword());
                             CreateObjectFacade.Companion.getInstance().setTempSession(new Session(userAuth));
                             System.out.println(CreateObjectFacade.Companion.getInstance().getTempSession().getCreator().getEmail());
+                            Toast.makeText(context,"Sessão iniciada",Toast.LENGTH_SHORT).show();
                             openNavDrawerActivity();
+
                         } else {
                             Toast.makeText(LoginActivity.this, "E-mail ou senha incorretos! Verifique e tente novamente.", Toast.LENGTH_LONG).show();
                         }
